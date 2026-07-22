@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zinari Ventures | From Kenyan Soil</title>
+<meta name="description" content="Fresh fruit, vegetables, poultry and single-origin Kenyan coffee, sourced from farms and co-ops. Consulting in agriculture, finance and technology.">
+<meta property="og:title" content="Zinari Ventures | From Kenyan Soil">
+<meta property="og:description" content="Premium Kenyan produce and single-origin coffee, farm to door.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23141414'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='18' fill='%23F5B301' text-anchor='middle'%3EZ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="topbar">
+  <div class="wrap nav-inner">
+    <a href="#top" class="nav-logo">
+      <div class="nav-logo-mark">Z</div>
+      <span class="nav-logo-text">Zinari Ventures</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="products.html">Products</a></li>
+      <li><a href="#coffee">Coffee</a></li>
+      <li><a href="consulting.html">Consulting</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#contact" class="btn btn-fill" style="padding:0.6rem 1.25rem;font-size:0.82rem;">Order now</a>
+      <button class="icon-btn" onclick="toggleTheme()" aria-label="Toggle light and dark theme"><i class="ph ph-sun" id="themeIcon"></i></button>
+      <button class="icon-btn hamburger" onclick="toggleMenu()" aria-label="Open menu"><i class="ph ph-list"></i></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="products.html">Products</a>
+  <a href="#coffee">Coffee</a>
+  <a href="consulting.html">Consulting</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <h1 class="sr-only">Zinari Ventures: fresh Kenyan produce, coffee and consulting</h1>
+  <div class="hero-stage rise" id="heroStage">
+    <div class="hero-word" id="heroWord" aria-hidden="true">Avocados</div>
+    <!-- Photos: Unsplash free license. Swap for real Zinari photos when available. -->
+    <div class="hero-photo">
+      <img id="heroImg" src="https://images.unsplash.com/photo-1519162808019-7de1683fa2ad?auto=format&fit=crop&w=800&h=800&q=80" alt="Fresh avocados from Kenyan farms">
+    </div>
+  </div>
+  <div class="wrap hero-foot">
+    <div class="rise">
+      <p class="hero-meta" aria-live="polite"><strong id="heroName">Avocados</strong> <span id="heroOrigin">Export grade</span></p>
+      <p class="hero-tag">Fruit, vegetables and single-origin coffee from Kenyan farms and co-ops, delivered with care.</p>
+    </div>
+    <div class="hero-actions rise">
+      <a href="#produce" class="btn btn-ink">See the produce <i class="ph ph-arrow-right"></i></a>
+    </div>
+  </div>
+</header>
+
+<!-- WHAT WE DO: 3 items, asymmetric bento -->
+<section id="overview">
+  <div class="wrap">
+    <h2 class="reveal">Three ways we <span class="tick">work.</span></h2>
+    <div class="bento">
+      <a href="#produce" class="cell cell-tall reveal">
+        <img src="https://images.unsplash.com/photo-1734255026082-82fdc81991f0?auto=format&fit=crop&w=1000&h=1250&q=80" alt="Fresh fruit and vegetables at a Kenyan market">
+        <div class="cell-body">
+          <i class="ph ph-basket"></i>
+          <h3>Fresh produce</h3>
+          <p>Fruit, vegetables and poultry from Kenyan farms and co-operatives, quality checked before every delivery.</p>
+        </div>
+      </a>
+      <a href="#coffee" class="cell reveal">
+        <img src="https://images.unsplash.com/photo-1586095516671-d085ff58cdd4?auto=format&fit=crop&w=1000&h=620&q=80" alt="Ripe coffee cherries on the branch">
+        <div class="cell-body">
+          <i class="ph ph-coffee"></i>
+          <h3>Kenyan coffee</h3>
+          <p>AA grade single-origin from Central Highlands co-ops, traceable from farm to cup.</p>
+        </div>
+      </a>
+      <a href="consulting.html" class="cell cell-plain reveal">
+        <div class="cell-body">
+          <i class="ph ph-chart-line-up"></i>
+          <h3>Expert consulting</h3>
+          <p>Agriculture, technology and financial consulting grounded in real Kenyan agribusiness experience. We built it, now we help you.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCE RAIL -->
+<section id="produce">
+  <div class="wrap">
+    <div class="rail-head">
+      <div>
+        <h2 class="reveal">Straight from the <span class="tick">farm.</span></h2>
+        <p class="lede reveal">Every product meets our quality standard before it reaches you. No exceptions.</p>
+      </div>
+    </div>
+    <div class="rail">
+      <div class="rail-card"><img src="https://images.unsplash.com/photo-1617631716600-6a454b430367?auto=format&fit=crop&w=440&h=300&q=80" alt="Plantains"><div class="body"><strong>Plantains</strong><span>Western Kenya</span></div></div>
+      <div class="rail-card"><img src="https://images.unsplash.com/photo-1587132137056-bfbf0166836e?auto=format&fit=crop&w=440&h=300&q=80" alt="Bananas"><div class="body"><strong>Bananas</strong><span>Multiple varieties</span></div></div>
+      <div class="rail-card"><img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?auto=format&fit=crop&w=440&h=300&q=80" alt="Oranges"><div class="body"><strong>Oranges</strong><span>Meru and Kisii</span></div></div>
+      <div class="rail-card"><img src="https://images.unsplash.com/photo-1519162808019-7de1683fa2ad?auto=format&fit=crop&w=440&h=300&q=80" alt="Avocados"><div class="body"><strong>Avocados</strong><span>Export grade</span></div></div>
+      <div class="rail-card"><img src="https://images.unsplash.com/photo-1624300477446-d379e923eca8?auto=format&fit=crop&w=440&h=300&q=80" alt="Sukuma wiki greens"><div class="body"><strong>Sukuma wiki</strong><span>Rift Valley</span></div></div>
+      <div class="rail-card"><img src="https://images.unsplash.com/photo-1582284540020-8acbe03f4924?auto=format&fit=crop&w=440&h=300&q=80" alt="Tomatoes"><div class="body"><strong>Tomatoes</strong><span>Thika and Mwea</span></div></div>
+      <div class="rail-card"><img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=440&h=300&q=80" alt="Free-range poultry"><div class="body"><strong>Poultry</strong><span>Zinari Farms</span></div></div>
+      <div class="rail-card"><img src="https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?auto=format&fit=crop&w=440&h=300&q=80" alt="Onions and garlic"><div class="body"><strong>Onions and garlic</strong><span>Naivasha</span></div></div>
+    </div>
+    <div class="reveal" style="margin-top:1.2rem;">
+      <a href="products.html" class="btn btn-fill">See prices and order <i class="ph ph-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- COFFEE -->
+<section class="coffee" id="coffee">
+  <div class="wrap coffee-grid">
+    <div>
+      <div class="eyebrow reveal">Kenyan coffee</div>
+      <h2 class="reveal">The world's best cup, <span class="tick">from Kenya.</span></h2>
+      <p class="lede reveal">We source from the Wachukuzi Planters Union and other highland co-ops, then process, package and deliver on behalf of the farmers who grow it. AA, AB and PB grades.</p>
+      <div class="regions reveal">
+        <div class="region"><strong>Nyeri</strong><span>Bold and bright</span></div>
+        <div class="region"><strong>Kirinyaga</strong><span>Winey and rich</span></div>
+        <div class="region"><strong>Murang'a</strong><span>Berry and citrus</span></div>
+        <div class="region"><strong>Embu</strong><span>Balanced and sweet</span></div>
+      </div>
+    </div>
+    <div class="coffee-media reveal">
+      <img src="https://images.unsplash.com/photo-1610891639877-eb78bcb416b5?auto=format&fit=crop&w=1200&h=900&q=80" alt="Freshly brewed single-origin Kenyan coffee">
+    </div>
+  </div>
+</section>
+
+<!-- COFFEE PROCESS + GRADES -->
+<section id="process">
+  <div class="wrap">
+    <h2 class="reveal">From cherry to <span class="tick">cup.</span></h2>
+    <p class="lede reveal">We oversee the full chain, wet mill to dry mill to packaging, using the washed process Kenya is celebrated for.</p>
+    <div class="process-grid">
+      <div class="steps">
+        <div class="step reveal" data-img="https://images.unsplash.com/photo-1586095516671-d085ff58cdd4?auto=format&fit=crop&w=900&h=680&q=80" data-alt="Ripe red coffee cherries on the branch">
+          <div class="step-badge"><i class="ph ph-basket"></i></div>
+          <div>
+            <h3>Cherry harvest</h3>
+            <p>Ripe red cherries are hand-picked by co-op member farmers during the main crop (October to December) and fly crop (April to June), at 1,400 to 2,000m.</p>
+          </div>
+        </div>
+        <div class="step reveal" data-img="https://images.unsplash.com/photo-1524350876685-274059332603?auto=format&fit=crop&w=900&h=680&q=80" data-alt="Milled coffee beans in a burlap sack">
+          <div class="step-badge"><i class="ph ph-drop"></i></div>
+          <div>
+            <h3>Wet milling</h3>
+            <p>Cherries are pulped at the washing station within hours of picking. The mucilage is fermented off and washed away with clean water, preserving the beans' clarity.</p>
+          </div>
+        </div>
+        <div class="step reveal" data-img="https://images.unsplash.com/photo-1442411210769-b95c4632195e?auto=format&fit=crop&w=900&h=680&q=80" data-alt="Coffee beans spread out to dry">
+          <div class="step-badge"><i class="ph ph-sun"></i></div>
+          <div>
+            <h3>Drying</h3>
+            <p>Parchment coffee dries on raised beds over two to three weeks, turned regularly for even moisture reduction to 11 or 12 percent.</p>
+          </div>
+        </div>
+        <div class="step reveal" data-img="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=900&h=680&q=80" data-alt="Graded coffee beans ready for export">
+          <div class="step-badge"><i class="ph ph-gear"></i></div>
+          <div>
+            <h3>Dry milling and grading</h3>
+            <p>Hulling, grading by screen size, density sorting and colour sorting produce clean, export-standard green beans.</p>
+          </div>
+        </div>
+        <div class="step reveal" data-img="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?auto=format&fit=crop&w=900&h=680&q=80" data-alt="Coffee roaster in action">
+          <div class="step-badge"><i class="ph ph-package"></i></div>
+          <div>
+            <h3>Roasting and packaging</h3>
+            <p>We roast to profile and pack in valve-sealed bags with full traceability: farm, co-op, region, grade and roast date.</p>
+          </div>
+        </div>
+      </div>
+      <div class="process-preview reveal">
+        <img id="processImg" src="https://images.unsplash.com/photo-1586095516671-d085ff58cdd4?auto=format&fit=crop&w=900&h=680&q=80" alt="Ripe red coffee cherries on the branch">
+      </div>
+    </div>
+    <div class="grades">
+      <div class="grade grade-wide reveal">
+        <b>AA</b>
+        <div>
+          <small>Screen 17 to 18, premium</small>
+          <p>The largest bean size and the most sought-after internationally. Full-bodied, with complex acidity and pronounced blackcurrant notes. Our primary export grade.</p>
+        </div>
+      </div>
+      <div class="grade reveal">
+        <b>AB</b>
+        <small>Screen 15 to 16, standard</small>
+        <p>A combination of A and B screens, equally complex and true to Kenyan terroir. Excellent for cafe supply and the local market.</p>
+      </div>
+      <div class="grade reveal">
+        <b>PB</b>
+        <small>Peaberry</small>
+        <p>A single round bean per cherry, prized for concentrated sweetness and a bright, lively cup.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULTING DETAIL -->
+<section id="consulting" class="band">
+  <div class="wrap">
+    <h2 class="reveal">Consulting from <span class="tick">practitioners.</span></h2>
+    <p class="lede reveal">We do not just consult, we operate. Our advice comes from running our own farm, co-op supply chains and financial operations in Kenya.</p>
+    <div class="acc">
+      <details class="reveal" open>
+        <summary>
+          <span class="acc-icon"><i class="ph ph-plant"></i></span>
+          <h3>Agriculture consulting</h3>
+          <i class="ph ph-caret-down acc-chev"></i>
+        </summary>
+        <div class="acc-body">
+          <p class="acc-lede">From farm setup and crop selection to irrigation, soil management and market linkages. We walk with you from land to profit.</p>
+          <div class="svc"><strong>Farm setup and crop planning</strong><span>Site assessment, crop selection, input planning and a seasonal calendar</span></div>
+          <div class="svc"><strong>Soil and irrigation management</strong><span>Soil testing, fertility planning, drip and overhead irrigation advice</span></div>
+          <div class="svc"><strong>Livestock and poultry</strong><span>Guidance on the livestock and poultry production best suited to you</span></div>
+          <div class="svc"><strong>Post-harvest handling</strong><span>Storage, packaging, grading and cold-chain advice to reduce losses</span></div>
+          <div class="svc"><strong>Cooperative and group formation</strong><span>Helping farmer groups formalise, govern and access markets collectively</span></div>
+          <div class="svc"><strong>Grant and financing guidance</strong><span>Identifying agri-finance products, AGPO, NGO grants and development funding</span></div>
+        </div>
+      </details>
+      <details class="reveal">
+        <summary>
+          <span class="acc-icon"><i class="ph ph-laptop"></i></span>
+          <h3>Technology consulting</h3>
+          <i class="ph ph-caret-down acc-chev"></i>
+        </summary>
+        <div class="acc-body">
+          <p class="acc-lede">Practical digital transformation for agribusinesses and SMEs, solving real operational problems rather than software for its own sake.</p>
+          <div class="svc"><strong>Farm management systems</strong><span>Digital tools for tracking crop cycles, inputs, labour and yields</span></div>
+          <div class="svc"><strong>E-commerce and online stores</strong><span>Building and managing online catalogues and ordering platforms</span></div>
+          <div class="svc"><strong>Business process automation</strong><span>Automating invoicing, orders, inventory tracking and reporting</span></div>
+          <div class="svc"><strong>Mobile and web applications</strong><span>Custom-built apps for internal operations or customer-facing services</span></div>
+          <div class="svc"><strong>Data and reporting dashboards</strong><span>Visualising sales, supply and operational data for better decisions</span></div>
+          <div class="svc"><strong>Digital strategy and training</strong><span>Helping leadership and staff adopt technology effectively</span></div>
+        </div>
+      </details>
+      <details class="reveal">
+        <summary>
+          <span class="acc-icon"><i class="ph ph-calculator"></i></span>
+          <h3>Financial and accounting</h3>
+          <i class="ph ph-caret-down acc-chev"></i>
+        </summary>
+        <div class="acc-body">
+          <p class="acc-lede">Bookkeeping, financial planning, tax compliance and business structuring for SMEs and farming enterprises with ambition that needs structure.</p>
+          <div class="svc"><strong>Bookkeeping and accounts</strong><span>Monthly reconciliation, ledger management and financial statements</span></div>
+          <div class="svc"><strong>Tax compliance (KRA)</strong><span>iTax filing, VAT returns, PAYE and KRA correspondence management</span></div>
+          <div class="svc"><strong>Business structuring</strong><span>Company registration, partnership agreements and legal structure advice</span></div>
+          <div class="svc"><strong>Financial planning and budgeting</strong><span>Business plans, cash-flow projections and budget frameworks</span></div>
+          <div class="svc"><strong>Farm enterprise accounting</strong><span>Cost of production, profitability per crop and season, input budgeting</span></div>
+          <div class="svc"><strong>Investor and lender reporting</strong><span>Financials for bank applications, SACCO loans and investor updates</span></div>
+        </div>
+      </details>
+    </div>
+    <div class="why-split">
+      <div class="why-grid">
+        <div class="why reveal"><i class="ph ph-globe-hemisphere-east"></i><div><strong>Kenya-specific knowledge</strong><p>We understand KRA, local agricultural systems, co-op structures and Kenyan SME realities. Advice that actually applies here.</p></div></div>
+        <div class="why reveal"><i class="ph ph-wrench"></i><div><strong>Operational, not theoretical</strong><p>Our team runs active operations. We give you advice we have tested ourselves, not frameworks borrowed from elsewhere.</p></div></div>
+        <div class="why reveal"><i class="ph ph-users-three"></i><div><strong>Long-term partnerships</strong><p>We are not one-session consultants. We walk with clients over time as the business grows and the challenges change.</p></div></div>
+        <div class="why reveal"><i class="ph ph-circles-three-plus"></i><div><strong>Cross-discipline thinking</strong><p>With agriculture, tech and finance under one roof, we see how each affects the others and give you the complete picture.</p></div></div>
+        <div class="reveal" style="margin-top:0.5rem;"><a href="consulting.html#book" class="btn btn-fill">Book a consultation <i class="ph ph-arrow-right"></i></a></div>
+      </div>
+      <div class="why-media reveal">
+        <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=900&h=1100&q=80" alt="An expert inspecting young crop seedlings in a nursery tray" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / WHY ZINARI -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <h2 class="reveal">Rooted in Kenya, built for <span class="tick">quality.</span></h2>
+      <p class="lede reveal">We are not a middleman. Zinari sources from co-ops and farmer partnerships, runs its own farm and poultry operations, and applies one strict quality standard to everything we supply.</p>
+    </div>
+    <div class="stats reveal">
+      <div class="stat"><b>10+</b><span>Varieties of fruit and vegetables</span></div>
+      <div class="stat"><b>100%</b><span>Kenyan sourced produce</span></div>
+      <div class="stat"><b>3</b><span>Consulting disciplines</span></div>
+      <div class="stat"><b>4</b><span>Coffee regions, direct from co-ops</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION AND VALUES -->
+<section id="mission" class="mission">
+  <div class="mission-bg" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1600&h=900&q=80" alt="" loading="lazy">
+  </div>
+  <div class="wrap">
+    <h2 class="reveal">What we <span class="tick">stand for.</span></h2>
+    <blockquote class="mission-quote reveal">To connect Kenyan farms with markets: fairly, transparently, and with an uncompromising standard of quality.</blockquote>
+    <div class="values">
+      <div class="value reveal"><i class="ph ph-plant"></i><strong>Farm-first sourcing</strong><p>Every product comes directly from farms and cooperatives. We cut out unnecessary layers and keep the grower at the centre.</p></div>
+      <div class="value reveal"><i class="ph ph-seal-check"></i><strong>Uncompromising quality</strong><p>Every batch is inspected before it moves. One strict standard across all products, with no exceptions for any client or order size.</p></div>
+      <div class="value reveal"><i class="ph ph-handshake"></i><strong>Fair to farmers</strong><p>We pay fair prices and build long-term partnerships. Sustainable agriculture begins with sustainable farmer livelihoods.</p></div>
+      <div class="value reveal"><i class="ph ph-cpu"></i><strong>Technology-backed operations</strong><p>We apply digital systems to our own business and help clients do the same, making agriculture more efficient and data-informed.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story">
+  <div class="wrap">
+    <h2 class="reveal">Where we <span class="tick">come from.</span></h2>
+    <div class="story-prose reveal">
+      <p>Zinari Ventures was born from a simple observation: <strong>Kenya grows some of the finest produce and coffee in the world, yet growers often receive too little of its value.</strong> Supply chains are long, middlemen are many, and the farmer at the end of the chain is often the last to benefit.</p>
+      <p>We built Zinari to change that model. We entered commercial agreements with cooperatives like the <strong>Wachukuzi Planters Union</strong> to process, package and sell their coffee directly, and built direct relationships with farms across Kenya, from Meru to Naivasha, from Thika to Western Kenya.</p>
+      <p>We also run our own farm and poultry unit. <strong>This is not theory for us; we are farmers too.</strong> We understand the inputs, the cycles, the risks and the rewards, and that is what makes our consulting different. Today Zinari Ventures is a proud subsidiary of Robin Investments Group Inc.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section id="team">
+  <div class="wrap">
+    <h2 class="reveal">The people <span class="tick">behind Zinari.</span></h2>
+    <p class="lede reveal">Three directors leading our work across agriculture, operations and marketing.</p>
+    <div class="team">
+      <div class="member reveal">
+        <div class="avatar" aria-hidden="true">VM</div>
+        <div>
+          <span class="member-role">Chief Executive Officer</span>
+          <h3>Victor Maina</h3>
+          <p>Founding CEO and the driving force behind Zinari's vision. Victor leads strategy, farmer partnerships and growth, and oversees the cooperative relationships at the heart of our supply model, including the Wachukuzi Planters Union. He also leads our agriculture consulting engagements.</p>
+          <div class="tags"><span class="tag">Strategic leadership</span><span class="tag">Agribusiness</span><span class="tag">Co-op management</span></div>
+        </div>
+      </div>
+      <div class="member reveal">
+        <div class="avatar" aria-hidden="true">EM</div>
+        <div>
+          <span class="member-role">Director of Business Development and Operations</span>
+          <h3>Elijah Mugo</h3>
+          <p>Elijah bridges the field and the marketplace: day-to-day supply chain coordination, quality assurance and growth into new markets. He brings the operational discipline that keeps our product standard consistent at scale, and leads our technology consulting practice.</p>
+          <div class="tags"><span class="tag">Operations</span><span class="tag">Business development</span><span class="tag">Technology consulting</span></div>
+        </div>
+      </div>
+      <div class="member reveal">
+        <div class="avatar" aria-hidden="true">MM</div>
+        <div>
+          <span class="member-role">Director of Marketing and Business Administration</span>
+          <h3>Moureen Maina</h3>
+          <p>Moureen shapes Zinari's brand voice, manages customer relationships and drives sales across all product lines. She keeps the business running with financial discipline and clear administration, and leads our finance and accounting consulting services.</p>
+          <div class="tags"><span class="tag">Marketing and brand</span><span class="tag">Administration</span><span class="tag">Finance consulting</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="eyebrow reveal">Reach us</div>
+      <h2 class="reveal">Order, enquire, or <span class="tick">partner with us.</span></h2>
+      <p class="lede reveal">Wholesaler, restaurant, individual customer or consulting client: we would love to hear from you.</p>
+      <div class="contact-list reveal">
+        <div class="contact-item"><i class="ph ph-map-pin"></i><div><small>Location</small><span>Nairobi, Kenya</span></div></div>
+        <div class="contact-item"><i class="ph ph-envelope-simple"></i><div><small>Email</small><span>hello@zinariventures.co.ke</span></div></div>
+        <div class="contact-item"><i class="ph ph-whatsapp-logo"></i><div><small>Phone / WhatsApp</small><span>+254 700 000 000</span></div></div>
+        <div class="contact-item"><i class="ph ph-buildings"></i><div><small>Part of</small><span style="color:var(--accent-text);">Robin Investments Group Inc.</span></div></div>
+      </div>
+    </div>
+    <form class="reveal" onsubmit="return handleContact(event)">
+      <div class="form-row">
+        <div class="field" id="f-name">
+          <label for="c-name">Your name</label>
+          <input id="c-name" type="text" placeholder="Wanjiru Kamau" autocomplete="name">
+          <span class="err">Please enter your name.</span>
+        </div>
+        <div class="field" id="f-contact">
+          <label for="c-contact">Phone or email</label>
+          <input id="c-contact" type="text" placeholder="+254 7xx xxx xxx" autocomplete="tel">
+          <span class="err">We need a way to reach you.</span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="c-interest">I'm interested in</label>
+        <select id="c-interest">
+          <option>Fresh produce (fruit and veg)</option>
+          <option>Kenyan coffee supply</option>
+          <option>Agriculture consulting</option>
+          <option>Technology consulting</option>
+          <option>Financial and accounting</option>
+          <option>Partnership / general enquiry</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="c-message">Tell us more</label>
+        <textarea id="c-message" rows="4" placeholder="Quantity needed, location, specific requirements..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-fill" style="align-self:flex-start;">Send on WhatsApp <i class="ph ph-paper-plane-tilt"></i></button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap ftr-top">
+    <div class="ftr-brand">
+      <a href="#top" class="nav-logo">
+        <div class="nav-logo-mark">Z</div>
+        <span class="nav-logo-text">Zinari Ventures</span>
+      </a>
+      <div>
+        <p class="ftr-note">Fresh produce, poultry and single-origin coffee from Kenyan farms and co-ops.</p>
+        <p class="ftr-note">Consulting in agriculture, finance and technology.</p>
+      </div>
+      <div class="ftr-social" aria-label="Social media">
+        <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+        <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+        <a href="#" aria-label="X"><i class="ph ph-x-logo"></i></a>
+        <a href="#" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+        <a href="https://wa.me/254700000000" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="ph ph-whatsapp-logo"></i></a>
+      </div>
+      <ul class="ftr-clocks" aria-label="Local time in our markets">
+        <li class="ftr-clock">
+          <span class="clock-time" data-tz="Africa/Nairobi">--:--</span>
+          <span class="clock-city">Nairobi</span>
+          <span class="clock-zone">E. Africa</span>
+        </li>
+        <li class="ftr-clock">
+          <span class="clock-time" data-tz="Asia/Dubai">--:--</span>
+          <span class="clock-city">Dubai</span>
+          <span class="clock-zone">Middle East</span>
+        </li>
+        <li class="ftr-clock">
+          <span class="clock-time" data-tz="Europe/London">--:--</span>
+          <span class="clock-city">London</span>
+          <span class="clock-zone">Europe</span>
+        </li>
+        <li class="ftr-clock">
+          <span class="clock-time" data-tz="America/New_York">--:--</span>
+          <span class="clock-city">New York</span>
+          <span class="clock-zone">N. America</span>
+        </li>
+      </ul>
+    </div>
+    <nav class="ftr-cols" aria-label="Footer">
+      <div class="ftr-col">
+        <span class="ftr-label">Products</span>
+        <a href="products.html">Fruit and vegetables</a>
+        <a href="products.html">Poultry</a>
+        <a href="#coffee">Kenyan coffee</a>
+      </div>
+      <div class="ftr-col">
+        <span class="ftr-label">Services</span>
+        <a href="#consulting">Agriculture consulting</a>
+        <a href="#consulting">Technology consulting</a>
+        <a href="#consulting">Finance and accounting</a>
+      </div>
+      <div class="ftr-col">
+        <span class="ftr-label">Legal</span>
+        <a href="pages/privacy.html">Privacy policy</a>
+        <a href="pages/terms.html">Terms of service</a>
+      </div>
+    </nav>
+  </div>
+  <div class="ftr-scene" aria-hidden="true">
+    <svg viewBox="0 0 1440 160" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false">
+      <defs>
+        <pattern id="dz50" width="6" height="6" patternUnits="userSpaceOnUse">
+          <rect width="3" height="3" fill="currentColor"/><rect x="3" y="3" width="3" height="3" fill="currentColor"/>
+        </pattern>
+        <pattern id="dz25" width="8" height="8" patternUnits="userSpaceOnUse">
+          <rect width="3" height="3" fill="currentColor"/>
+        </pattern>
+      </defs>
+      <rect x="0" y="134" width="1440" height="6" fill="url(#dz25)"/>
+      <rect x="0" y="140" width="1440" height="6" fill="url(#dz50)"/>
+      <rect x="0" y="146" width="1440" height="14" fill="currentColor"/>
+      <path fill="currentColor" d="M356,136 V118 h9 V136 Z M388,136 V118 h9 V136 Z"/>
+      <path fill="url(#dz50)" d="M452,124 V80 H492 V100 H548 V124 Z"/>
+      <rect x="510" y="84" width="6" height="18" rx="2" fill="currentColor"/>
+      <circle cx="474" cy="122" r="22" fill="currentColor"/>
+      <circle cx="540" cy="128" r="13" fill="currentColor"/>
+      <path fill="url(#dz50)" d="M620,136 V84 H820 V136 Z"/>
+      <path fill="currentColor" d="M620,84 L648,56 L720,40 L792,56 L820,84 Z"/>
+      <path fill="url(#dz50)" d="M832,136 V52 H880 V136 Z"/>
+      <path fill="currentColor" d="M832,52 Q832,30 856,30 Q880,30 880,52 Z"/>
+      <path fill="currentColor" d="M896,124 V110 Q896,104 902,104 H950 Q956,104 956,110 V124 Z M954,116 V100 Q954,96 958,96 H970 Q976,96 976,102 V112 Q976,116 972,116 Z M956,96 L960,90 L964,96 Z"/>
+      <rect x="892" y="106" width="4" height="16" rx="2" fill="currentColor"/>
+      <rect x="900" y="124" width="6" height="12" fill="currentColor"/>
+      <rect x="916" y="124" width="6" height="12" fill="currentColor"/>
+      <rect x="936" y="124" width="6" height="12" fill="currentColor"/>
+      <rect x="948" y="124" width="6" height="12" fill="currentColor"/>
+      <circle cx="1000" cy="126" r="9" fill="currentColor"/>
+      <circle cx="1008" cy="115" r="5" fill="currentColor"/>
+      <path fill="currentColor" d="M1012,113 L1018,116 L1012,118 Z M992,123 L984,114 L994,118 Z"/>
+      <circle cx="1032" cy="128" r="7" fill="currentColor"/>
+      <circle cx="1026" cy="119" r="4" fill="currentColor"/>
+      <path fill="currentColor" d="M1023,118 L1017,120 L1023,122 Z M1039,126 L1045,119 L1037,122 Z"/>
+      <path fill="currentColor" d="M1064,136 V118 h9 V136 Z M1096,136 V118 h9 V136 Z M1128,136 V118 h9 V136 Z"/>
+      <path fill="url(#dz50)" d="M1224,112 Q1194,110 1194,84 Q1194,56 1238,56 Q1282,56 1282,84 Q1282,110 1252,112 Z"/>
+      <rect x="1228" y="108" width="20" height="28" fill="currentColor"/>
+    </svg>
+  </div>
+  <div class="wrap ftr-bottom">
+    <span>© <span id="year">2026</span> Zinari Ventures</span>
+    <span class="sep">·</span>
+    <a href="mailto:hello@zinariventures.co.ke">hello@zinariventures.co.ke</a>
+    <span class="sep">·</span>
+    <span>Nairobi, Kenya</span>
+    <span class="sep">·</span>
+    <span>Part of Robin Investments Group Inc.</span>
+    <span class="sep">·</span>
+    <a href="https://elijah-mugo.vercel.app" target="_blank" rel="noopener">Designed by elijah-mugo.vercel.app</a>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fresh Produce and Prices | Zinari Ventures</title>
+<meta name="description" content="Order fresh Kenyan fruit, vegetables, poultry and eggs from Zinari Ventures. Current prices per kilo, farm to door.">
+<meta property="og:title" content="Fresh Produce and Prices | Zinari Ventures">
+<meta property="og:description" content="Order fresh Kenyan fruit, vegetables, poultry and eggs, farm to door.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23141414'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='18' fill='%23F5B301' text-anchor='middle'%3EZ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="topbar">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-mark">Z</div>
+      <span class="nav-logo-text">Zinari Ventures</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="products.html" class="active">Products</a></li>
+      <li><a href="index.html#coffee">Coffee</a></li>
+      <li><a href="consulting.html">Consulting</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn" onclick="toggleTheme()" aria-label="Toggle light and dark theme"><i class="ph ph-sun" id="themeIcon"></i></button>
+      <button class="icon-btn hamburger" onclick="toggleMenu()" aria-label="Open menu"><i class="ph ph-list"></i></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="products.html">Products</a>
+  <a href="index.html#coffee">Coffee</a>
+  <a href="consulting.html">Consulting</a>
+  <a href="index.html#about">About</a>
+  <a href="index.html#contact">Contact</a>
+</div>
+
+<!-- PAGE HEAD -->
+<header class="page-hero" id="top" style="padding-bottom:0;">
+  <div class="wrap">
+    <h1 class="rise">Fresh from the <span class="tick">farm.</span></h1>
+    <p class="lede rise">Pick what you need, set the quantity, and send your order on WhatsApp. Every product meets our quality standard before it reaches you.</p>
+    <div class="filters rise" role="group" aria-label="Filter products">
+      <button class="filter-chip active" data-filter="all">All</button>
+      <button class="filter-chip" data-filter="fruit">Fruit</button>
+      <button class="filter-chip" data-filter="veg">Vegetables</button>
+      <button class="filter-chip" data-filter="poultry">Poultry and eggs</button>
+    </div>
+  </div>
+</header>
+
+<!-- PRODUCTS -->
+<section style="padding-top:1.5rem;">
+  <div class="wrap">
+    <div class="product-grid" id="productGrid"></div>
+  </div>
+</section>
+
+<!-- CART -->
+<button class="cart-fab" id="cartFab" onclick="openCart()" aria-label="Open your order basket">
+  <i class="ph ph-basket"></i> Basket <span class="cart-count" id="cartCount">0</span>
+</button>
+<div class="cart-backdrop" id="cartBackdrop" onclick="closeCart()"></div>
+<aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Your order">
+  <div class="cart-head">
+    <h2>Your order</h2>
+    <button class="icon-btn" id="cartClose" onclick="closeCart()" aria-label="Close basket"><i class="ph ph-x"></i></button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>Total</span><span id="cartTotal">KSh 0</span></div>
+    <button class="btn btn-fill" id="orderBtn" onclick="orderOnWhatsApp()" style="justify-content:center;">Order on WhatsApp <i class="ph ph-paper-plane-tilt"></i></button>
+  </div>
+</aside>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap ftr-top">
+    <div class="ftr-brand">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-mark">Z</div>
+        <span class="nav-logo-text">Zinari Ventures</span>
+      </a>
+      <div>
+        <p class="ftr-note">Fresh produce, poultry and single-origin coffee from Kenyan farms and co-ops.</p>
+        <p class="ftr-note">Consulting in agriculture, finance and technology.</p>
+      </div>
+      <div class="ftr-social" aria-label="Social media">
+        <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+        <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+        <a href="#" aria-label="X"><i class="ph ph-x-logo"></i></a>
+        <a href="#" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+        <a href="https://wa.me/254700000000" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="ph ph-whatsapp-logo"></i></a>
+      </div>
+      <ul class="ftr-clocks" aria-label="Local time in our markets">
+        <li class="ftr-clock">
+          <span class="clock-time" data-tz="Africa/Nairobi">--:--</span>
+          <span class="clock-city">Nairobi</span>
+          <span class="clock-zone">E. Africa</span>
+        </li>
+        <li class="ftr-clock">
+          <span class="clock-time" data-tz="Asia/Dubai">--:--</span>
+          <span class="clock-city">Dubai</span>
+          <span class="clock-zone">Middle East</span>
+        </li>
+        <li class="ftr-clock">
+          <span class="clock-time" data-tz="Europe/London">--:--</span>
+          <span class="clock-city">London</span>
+          <span class="clock-zone">Europe</span>
+        </li>
+        <li class="ftr-clock">
+          <span class="clock-time" data-tz="America/New_York">--:--</span>
+          <span class="clock-city">New York</span>
+          <span class="clock-zone">N. America</span>
+        </li>
+      </ul>
+    </div>
+    <nav class="ftr-cols" aria-label="Footer">
+      <div class="ftr-col">
+        <span class="ftr-label">Products</span>
+        <a href="products.html">Fruit and vegetables</a>
+        <a href="products.html">Poultry</a>
+        <a href="index.html#coffee">Kenyan coffee</a>
+      </div>
+      <div class="ftr-col">
+        <span class="ftr-label">Services</span>
+        <a href="consulting.html#services">Agriculture consulting</a>
+        <a href="consulting.html#services">Technology consulting</a>
+        <a href="consulting.html#services">Finance and accounting</a>
+      </div>
+      <div class="ftr-col">
+        <span class="ftr-label">Legal</span>
+        <a href="pages/privacy.html">Privacy policy</a>
+        <a href="pages/terms.html">Terms of service</a>
+      </div>
+    </nav>
+  </div>
+  <div class="ftr-scene" aria-hidden="true">
+    <svg viewBox="0 0 1440 160" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false">
+      <defs>
+        <pattern id="dz50" width="6" height="6" patternUnits="userSpaceOnUse">
+          <rect width="3" height="3" fill="currentColor"/><rect x="3" y="3" width="3" height="3" fill="currentColor"/>
+        </pattern>
+        <pattern id="dz25" width="8" height="8" patternUnits="userSpaceOnUse">
+          <rect width="3" height="3" fill="currentColor"/>
+        </pattern>
+      </defs>
+      <rect x="0" y="134" width="1440" height="6" fill="url(#dz25)"/>
+      <rect x="0" y="140" width="1440" height="6" fill="url(#dz50)"/>
+      <rect x="0" y="146" width="1440" height="14" fill="currentColor"/>
+      <path fill="currentColor" d="M356,136 V118 h9 V136 Z M388,136 V118 h9 V136 Z"/>
+      <path fill="url(#dz50)" d="M452,124 V80 H492 V100 H548 V124 Z"/>
+      <rect x="510" y="84" width="6" height="18" rx="2" fill="currentColor"/>
+      <circle cx="474" cy="122" r="22" fill="currentColor"/>
+      <circle cx="540" cy="128" r="13" fill="currentColor"/>
+      <path fill="url(#dz50)" d="M620,136 V84 H820 V136 Z"/>
+      <path fill="currentColor" d="M620,84 L648,56 L720,40 L792,56 L820,84 Z"/>
+      <path fill="url(#dz50)" d="M832,136 V52 H880 V136 Z"/>
+      <path fill="currentColor" d="M832,52 Q832,30 856,30 Q880,30 880,52 Z"/>
+      <path fill="currentColor" d="M896,124 V110 Q896,104 902,104 H950 Q956,104 956,110 V124 Z M954,116 V100 Q954,96 958,96 H970 Q976,96 976,102 V112 Q976,116 972,116 Z M956,96 L960,90 L964,96 Z"/>
+      <rect x="892" y="106" width="4" height="16" rx="2" fill="currentColor"/>
+      <rect x="900" y="124" width="6" height="12" fill="currentColor"/>
+      <rect x="916" y="124" width="6" height="12" fill="currentColor"/>
+      <rect x="936" y="124" width="6" height="12" fill="currentColor"/>
+      <rect x="948" y="124" width="6" height="12" fill="currentColor"/>
+      <circle cx="1000" cy="126" r="9" fill="currentColor"/>
+      <circle cx="1008" cy="115" r="5" fill="currentColor"/>
+      <path fill="currentColor" d="M1012,113 L1018,116 L1012,118 Z M992,123 L984,114 L994,118 Z"/>
+      <circle cx="1032" cy="128" r="7" fill="currentColor"/>
+      <circle cx="1026" cy="119" r="4" fill="currentColor"/>
+      <path fill="currentColor" d="M1023,118 L1017,120 L1023,122 Z M1039,126 L1045,119 L1037,122 Z"/>
+      <path fill="currentColor" d="M1064,136 V118 h9 V136 Z M1096,136 V118 h9 V136 Z M1128,136 V118 h9 V136 Z"/>
+      <path fill="url(#dz50)" d="M1224,112 Q1194,110 1194,84 Q1194,56 1238,56 Q1282,56 1282,84 Q1282,110 1252,112 Z"/>
+      <rect x="1228" y="108" width="20" height="28" fill="currentColor"/>
+    </svg>
+  </div>
+  <div class="wrap ftr-bottom">
+    <span>© <span id="year">2026</span> Zinari Ventures</span>
+    <span class="sep">·</span>
+    <a href="mailto:hello@zinariventures.co.ke">hello@zinariventures.co.ke</a>
+    <span class="sep">·</span>
+    <span>Nairobi, Kenya</span>
+    <span class="sep">·</span>
+    <span>Part of Robin Investments Group Inc.</span>
+    <span class="sep">·</span>
+    <a href="https://elijah-mugo.vercel.app" target="_blank" rel="noopener">Designed by elijah-mugo.vercel.app</a>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="app.js"></script>
+<script>
+/* Catalogue: names, prices and units from the Zinari products data */
+const CATALOG = [
+  { id: 'plantains', name: 'Plantains',         cat: 'fruit',   price: 120, unit: 'kg',   note: 'Western Kenya',            img: 'https://images.unsplash.com/photo-1617631716600-6a454b430367?auto=format&fit=crop&w=440&h=300&q=80' },
+  { id: 'bananas',   name: 'Bananas',           cat: 'fruit',   price: 80,  unit: 'kg',   note: 'Multiple varieties',       img: 'https://images.unsplash.com/photo-1587132137056-bfbf0166836e?auto=format&fit=crop&w=440&h=300&q=80' },
+  { id: 'oranges',   name: 'Oranges',           cat: 'fruit',   price: 150, unit: 'kg',   note: 'Meru and Kisii',           img: 'https://images.unsplash.com/photo-1557800636-894a64c1696f?auto=format&fit=crop&w=440&h=300&q=80' },
+  { id: 'avocados',  name: 'Avocados',          cat: 'fruit',   price: 200, unit: 'kg',   note: 'Export grade',             img: 'https://images.unsplash.com/photo-1519162808019-7de1683fa2ad?auto=format&fit=crop&w=440&h=300&q=80' },
+  { id: 'lemons',    name: 'Lemons and limes',  cat: 'fruit',   price: 130, unit: 'kg',   note: 'Sun-ripened citrus',       img: 'https://images.unsplash.com/photo-1590502593747-42a996133562?auto=format&fit=crop&w=440&h=300&q=80' },
+  { id: 'sukuma',    name: 'Sukuma wiki',       cat: 'veg',     price: 60,  unit: 'kg',   note: 'Rift Valley',              img: 'https://images.unsplash.com/photo-1624300477446-d379e923eca8?auto=format&fit=crop&w=440&h=300&q=80' },
+  { id: 'onions',    name: 'Onions and garlic', cat: 'veg',     price: 90,  unit: 'kg',   note: 'Naivasha',                 img: 'https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?auto=format&fit=crop&w=440&h=300&q=80' },
+  { id: 'tomatoes',  name: 'Tomatoes',          cat: 'veg',     price: 250, unit: 'kg',   note: 'Thika and Mwea',           img: 'https://images.unsplash.com/photo-1582284540020-8acbe03f4924?auto=format&fit=crop&w=440&h=300&q=80' },
+  { id: 'spinach',   name: 'Spinach',           cat: 'veg',     price: 70,  unit: 'kg',   note: 'Leafy and tender',         img: 'https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=440&h=300&q=80' },
+  { id: 'chicken',   name: 'Whole chicken',     cat: 'poultry', price: 650, unit: 'kg',   note: 'Zinari Farms, free-range', img: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=440&h=300&q=80' },
+  { id: 'pieces',    name: 'Chicken pieces',    cat: 'poultry', price: 700, unit: 'kg',   note: 'Cut to order',             img: 'https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&w=440&h=300&q=80' },
+  { id: 'eggs',      name: 'Fresh eggs',        cat: 'poultry', price: 550, unit: 'tray', note: 'Tray of 30, free-range',   img: 'https://images.unsplash.com/photo-1518569656558-1f25e69d93d7?auto=format&fit=crop&w=440&h=300&q=80' }
+];
+const CART_KEY = 'zinari-cart';
+let cart = {};
+try { cart = JSON.parse(localStorage.getItem(CART_KEY)) || {}; } catch (e) { cart = {}; }
+
+const ksh = n => 'KSh ' + n.toLocaleString('en-KE');
+const byId = id => CATALOG.find(p => p.id === id);
+
+/* Product grid */
+(function renderGrid() {
+  const grid = document.getElementById('productGrid');
+  grid.innerHTML = CATALOG.map(p => `
+    <div class="product-card" data-cat="${p.cat}">
+      <img src="${p.img}" alt="${p.name}" loading="lazy">
+      <div class="product-body">
+        <strong>${p.name}</strong>
+        <span class="product-note">${p.note}</span>
+        <div class="price">${ksh(p.price)} <span>/ ${p.unit}</span></div>
+        <div class="card-actions">
+          <span class="stepper" aria-label="Quantity of ${p.name}">
+            <button type="button" onclick="bumpQty('${p.id}', -1)" aria-label="Less"><i class="ph ph-minus"></i></button>
+            <output id="qty-${p.id}">1</output>
+            <button type="button" onclick="bumpQty('${p.id}', 1)" aria-label="More"><i class="ph ph-plus"></i></button>
+          </span>
+          <button type="button" class="btn btn-fill add-btn" onclick="addToCart('${p.id}')">Add <i class="ph ph-basket"></i></button>
+        </div>
+      </div>
+    </div>`).join('');
+})();
+
+/* Filters */
+document.querySelectorAll('.filter-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    const f = chip.dataset.filter;
+    document.querySelectorAll('.product-card').forEach(card => {
+      card.classList.toggle('hidden', f !== 'all' && card.dataset.cat !== f);
+    });
+  });
+});
+
+/* Quantity steppers (pre-add) */
+const pending = {};
+function bumpQty(id, d) {
+  pending[id] = Math.min(99, Math.max(1, (pending[id] || 1) + d));
+  document.getElementById('qty-' + id).textContent = pending[id];
+}
+
+/* Cart */
+function saveCart() { localStorage.setItem(CART_KEY, JSON.stringify(cart)); }
+function cartCount() { return Object.values(cart).reduce((a, b) => a + b, 0); }
+function cartTotal() { return Object.entries(cart).reduce((sum, [id, q]) => sum + byId(id).price * q, 0); }
+
+function addToCart(id) {
+  cart[id] = (cart[id] || 0) + (pending[id] || 1);
+  pending[id] = 1;
+  document.getElementById('qty-' + id).textContent = 1;
+  saveCart(); renderCart();
+  showToast(byId(id).name + ' added to your order');
+}
+function setCartQty(id, d) {
+  cart[id] = (cart[id] || 0) + d;
+  if (cart[id] <= 0) delete cart[id];
+  saveCart(); renderCart();
+}
+function removeFromCart(id) { delete cart[id]; saveCart(); renderCart(); }
+
+function renderCart() {
+  document.getElementById('cartCount').textContent = cartCount();
+  const box = document.getElementById('cartItems');
+  const ids = Object.keys(cart);
+  document.getElementById('orderBtn').disabled = !ids.length;
+  document.getElementById('cartTotal').textContent = ksh(cartTotal());
+  if (!ids.length) {
+    box.innerHTML = '<div class="cart-empty"><i class="ph ph-basket"></i>Your basket is empty.<br>Add produce to start an order.</div>';
+    return;
+  }
+  box.innerHTML = ids.map(id => {
+    const p = byId(id), q = cart[id];
+    return `
+    <div class="cart-row">
+      <div>
+        <strong>${p.name}</strong>
+        <div class="sub">${ksh(p.price)} / ${p.unit}</div>
+      </div>
+      <div class="cart-row-right">
+        <span class="stepper" aria-label="Quantity of ${p.name} in basket">
+          <button type="button" onclick="setCartQty('${id}', -1)" aria-label="Less"><i class="ph ph-minus"></i></button>
+          <output>${q}</output>
+          <button type="button" onclick="setCartQty('${id}', 1)" aria-label="More"><i class="ph ph-plus"></i></button>
+        </span>
+        <span class="line-total">${ksh(p.price * q)}</span>
+        <button type="button" class="remove-btn" onclick="removeFromCart('${id}')" aria-label="Remove ${p.name}"><i class="ph ph-trash"></i></button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function openCart() {
+  document.getElementById('cartDrawer').classList.add('open');
+  document.getElementById('cartBackdrop').classList.add('open');
+  document.getElementById('cartClose').focus();
+}
+function closeCart() {
+  document.getElementById('cartDrawer').classList.remove('open');
+  document.getElementById('cartBackdrop').classList.remove('open');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCart(); });
+
+function orderOnWhatsApp() {
+  const ids = Object.keys(cart);
+  if (!ids.length) { showToast('Your basket is empty'); return; }
+  const lines = ids.map(id => {
+    const p = byId(id), q = cart[id];
+    return '- ' + q + ' ' + p.unit + (q > 1 && p.unit === 'tray' ? 's' : '') + ' ' + p.name + ' (' + ksh(p.price * q) + ')';
+  });
+  const text = ['Hello Zinari Ventures! I would like to order:', '', ...lines, '', 'Total: ' + ksh(cartTotal())].join('\n');
+  window.open('https://wa.me/254700000000?text=' + encodeURIComponent(text), '_blank');
+  showToast('Redirecting to WhatsApp');
+}
+
+renderCart();
+</script>
+</body>
+</html>
