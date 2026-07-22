@@ -631,3 +631,15 @@ footer {
 .cart-empty i { font-size: 2.2rem; color: var(--accent-text); display: block; margin-bottom: 0.6rem; }
 .cart-foot { border-top: 1px solid var(--line); padding: 1.2rem 1.4rem; display: flex; flex-direction: column; gap: 0.9rem; }
 .cart-total { display: flex; justify-content: space-between; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 1.15rem; }
+
+/* Mobile: each process step reveals its own image while in the middle of the viewport */
+.step-img { display: none; }
+@media (max-width: 767px) {
+  .process-preview { display: none; }
+  .step-img { display: block; overflow: hidden; max-height: 0; opacity: 0; margin-top: 0; }
+  .step-img img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 12px; }
+  .step.in-view .step-img { max-height: 240px; opacity: 1; margin-top: 0.9rem; }
+}
+@media (max-width: 767px) and (prefers-reduced-motion: no-preference) {
+  .step-img { transition: max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease, margin-top 0.45s ease; }
+}

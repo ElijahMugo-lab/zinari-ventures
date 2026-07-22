@@ -184,3 +184,24 @@ document.getElementById('year').textContent = new Date().getFullYear();
   });
   show(steps[0]);
 })();
+
+/* Mobile process steps: inline image appears while the step is mid-viewport,
+   disappears as it scrolls out. Desktop keeps the hover preview panel. */
+(function () {
+  const steps = document.querySelectorAll('#process .step[data-img]');
+  if (!steps.length) return;
+  steps.forEach(s => {
+    const box = document.createElement('div');
+    box.className = 'step-img';
+    const im = document.createElement('img');
+    im.src = s.dataset.img;
+    im.alt = s.dataset.alt || '';
+    im.loading = 'lazy';
+    box.appendChild(im);
+    s.lastElementChild.appendChild(box);
+  });
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => e.target.classList.toggle('in-view', e.isIntersecting));
+  }, { rootMargin: '-30% 0px -30% 0px', threshold: 0 });
+  steps.forEach(s => io.observe(s));
+})();
