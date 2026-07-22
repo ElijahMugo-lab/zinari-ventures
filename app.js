@@ -185,8 +185,8 @@ document.getElementById('year').textContent = new Date().getFullYear();
   show(steps[0]);
 })();
 
-/* Mobile process steps: inline image appears while the step is mid-viewport,
-   disappears as it scrolls out. Desktop keeps the hover preview panel. */
+/* Mobile process steps: each step carries its own image card, matched to the
+   step content. Desktop keeps the hover preview panel. */
 (function () {
   const steps = document.querySelectorAll('#process .step[data-img]');
   if (!steps.length) return;
@@ -200,8 +200,4 @@ document.getElementById('year').textContent = new Date().getFullYear();
     box.appendChild(im);
     s.lastElementChild.appendChild(box);
   });
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => e.target.classList.toggle('in-view', e.isIntersecting));
-  }, { rootMargin: '-30% 0px -30% 0px', threshold: 0 });
-  steps.forEach(s => io.observe(s));
 })();
